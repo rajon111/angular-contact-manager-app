@@ -6,6 +6,7 @@
         </div>
     </div>
 </div>
+{{contact | json}}
 
 <!-- Contact Details -->
 <div class="container">
@@ -15,7 +16,7 @@
         </div>
         <div class="col-sm-6">
             <div class="list-group">
-                <li class="list-group-item list-group-item-danger">Name: <span class="fw-bold">Name</span></li>
+                <li class="list-group-item list-group-item-danger">Name: <span class="fw-bold">{{contact.name?contact.name : 'nothing' }}</span></li>
                 <li class="list-group-item list-group-item-danger">Email: <span class="fw-bold">Email</span></li>
                 <li class="list-group-item list-group-item-danger">mobile: <span class="fw-bold">Mobile</span></li>
                 <li class="list-group-item list-group-item-danger">Company: <span class="fw-bold">Name</span></li>
@@ -24,6 +25,7 @@
             </div>
         </div>
     </div>
+  <pre>{{this.contactId}}</pre>
     <div class="row mt-3">
         <div class="col">
             <a routerLink="/" class="btn btn-danger"> <i class="fa fa-arrow-alt-circle-left"></i> Back</a>
